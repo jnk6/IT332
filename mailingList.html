@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+
+<style>
+
+form { 
+width: 70%; 
+margin: auto; 
+margin-top: 40px; 
+width: 500px;
+
+font-size: 17px;
+font-style: italic;
+line-height: 24px;
+font-weight: bold;
+color: #FF0000;
+border-radius: 10px;
+padding:15px;
+border: 10px solid #FF00A0;
+
+}
+
+fieldset
+{
+
+border-radius:10px;
+
+}
+
+
+label {background:white;float:left;width:140px}
+
+a {font-style:oblique}
+
+.center { margin-left: auto; margin-right: auto;}
+
+</style>
+
+
+
+
+<form action = "emailRegister.php" >
+<fieldset><legend>Add me to the Paypal phishing mailing list Form</legend>
+<br>
+<label for = "password1"> Password </label> <input type = password id = "password1" name = "password" required placeholder= "Enter password here" autocomplete = "off" autofocus = "on" ><br></input>
+
+<label for = "password2">Confirm Password</label> <input type = password id = "password2" autocomplete = "off" name = "username" required> <br><br></input>
+
+<label for = "Email">Email</label> <input type = text id = "Email" name = "email" ><br></input>
+
+<label for = "removeMe">Remove me instead of add me</label><input type = checkbox  id= "removeMe" name = "removeMe" > <br><br>
+
+
+<input type = submit onclick = "check()">
+
+</fieldset>
+
+
+</form>
+
+<script>
+
+function check ()
+
+{
+
+	pwd1 = document.getElementById("password1");
+
+	pwd2 = document.getElementById("password2");
+
+	if (pwd1.value == pwd2.value)
+
+	{
+
+		//alert ("password 1 is the same as password 2");
+
+	}
+
+	else 
+
+		{ 
+
+			pwd2.value = null;
+
+			alert ("Password does not match, please try again."); 
+
+			return false;
+
+		}
+
+}
+
+</script>
+
