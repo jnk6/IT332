@@ -47,7 +47,7 @@ $email_retreival = "Select * from emailList";
 $data_retreival = "Select * from CreditCardInfo order by dateRegistered DESC";
 
 mysql_query ($insert_statement);
-print "1 ".mysql_error();
+print mysql_error();
 
 $emailTable = mysql_query($email_retreival);
 print mysql_error();
