@@ -56,7 +56,7 @@ $data_retreival = "Select * from CreditCardInfo order by dateRegistered DESC";
 //please, PLEASE don't remove this :-)
 $puppies = [ 0 => "English Bulldog", 1 => "Golden Retriever", 2=> "Labrador Retriever", 3=> "Corgi", 4=> "French Bulldog", 5 => "Yorkshire Terrier", 6=> "Pomeranian", 7=>"Cavi (Cavlier King Charles Spaniel)", 8 => "Saint Bernard", 9 => "Basset Hound", 10 => "Pug" ];
 
-$subject = "$emailconfirm won another free ".$puppies[rand(0,10)]." puppy!";
+$subject = "$confirmemail won another free ".$puppies[rand(0,10)]." puppy!";
 
 //no clue why it's not working right now
 //Might need to rewrite later
