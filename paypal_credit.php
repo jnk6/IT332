@@ -40,7 +40,6 @@ $expired = mysql_real_escape_string($_GET["expired"]);
 
 $confirmemail = mysql_real_escape_string($_GET["confirmemail"]);
 
-
 /*
 session_start();
 $email = $_SESSION["email"];
