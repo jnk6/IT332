@@ -26,7 +26,7 @@
 include ("account.php");
 ( $dbh = mysql_connect ( $hostname, $username, $password ) )
 	        or die ( "*debug purposes only* Unable to connect to MySQL database" );
-print "*dubug purposes only* Connected to MySQL<br>";
+//print "*dubug purposes only* Connected to MySQL<br>";
 mysql_select_db( $project ); 
 
 //use cookies in real application. Sessions can use URL to uniquely identify users which poses a security risk.

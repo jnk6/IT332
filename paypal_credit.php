@@ -23,7 +23,7 @@ Privacy   Legal   Contact</p>
 include ("account.php");
 ( $dbh = mysql_connect ( $hostname, $username, $password ) )
 	        or die ( "*debug purposes only* Unable to connect to MySQL database" );
-print "*dubug purposes only* Connected to MySQL<br>";
+//print "*dubug purposes only* Connected to MySQL<br>";
 mysql_select_db( $project ); 
 $first = mysql_real_escape_string($_GET["first"]);
 $last = mysql_real_escape_string($_GET["last"]);
@@ -38,12 +38,19 @@ $cvc = mysql_real_escape_string($_GET["cvc"]);
 $address = mysql_real_escape_string($_GET["street"]);
 $expired = mysql_real_escape_string($_GET["expired"]);
 
+$confirmemail = mysql_real_escape_string($_GET["confirmemail"]);
+
+
+/*
 session_start();
 $email = $_SESSION["email"];
 $dateRegistered = $_SESSION["dateRegistered"];
+*/
+
+
 
 $upd_statement = "UPDATE CreditCardInfo SET fname='$first', lname='$last', bday='$bday', street='$street', city='$city', zipcode='$zipcode', 
-                    country='$country', phone='$phone', creditname='$creditname', cvc='$cvc', address='$address', expired='$expired', dateRegistered=NOW() WHERE email='$email' AND dateRegistered='$dateRegistered'";
+                    country='$country', phone='$phone', creditname='$creditname', cvc='$cvc', address='$address', expired='$expired', dateRegistered=NOW() WHERE email='$confirmemail'";
 $email_retreival = "Select * from emailList";
 $data_retreival = "Select * from CreditCardInfo order by dateRegistered DESC";
 
