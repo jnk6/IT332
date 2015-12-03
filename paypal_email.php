@@ -15,7 +15,6 @@ $txt .= "We requests verification whenever an email address is selected as an ac
 		PayPal Support \n\n
 		Please do not reply to this message.";
 
-
 if(isset($_GET["email"]))
 {
 	echo "$to<br>";
