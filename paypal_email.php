@@ -1,7 +1,6 @@
 <?php
 
 $to = "targetperson332@mailinator.com";
-$from = "paypal-customerservice@paypal.com";
 $headers = "From: paypal-customerservice@paypal.com";
 $subject = "Your PayPal Account Has Expired";
 $txt = "Dear Customer, \n
