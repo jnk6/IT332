@@ -2,22 +2,33 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body>
 
+<title>Thank You-Paypal</title>
 
+<style>
+	a{font-family: Arial, Helvetica, sans-serif;color:#1d83c5;font-weight: bold;text-decoration: none;}
+	p{margin-top:30px;text-align:left}
+	p.space{font-family: Arial, Helvetica, sans-serif; color:black; font-size: 75%;}
+	h1{margin-top:40px; font-family: Arial, Helvetica, sans-serif;color:#1d83c5;}
+	h2{font-family: Arial, Helvetica, sans-serif;}
+	
+	
+</style>
+<body>
 
-
-
-<div>
-<p><img src="download.jpg" align="left" style="height:30px;width:100px">
-<a href="https://www.paypal.com/signin/" style="float:right" target="_blank">Log In</a></p><br><br><hr>
+<p><img src= "download.jpg" align="left" style="height:30px; width:100px;">
+<a href="https://www.paypal.com/signin/" style="float: right;">Log In</a></p><br><br><hr>
 <h1>Your account is ready to use!</h1>
 <h2>Shop, sell things, and transfer money with PayPal now.</h2>
-<p><img src="successpage.jpg" align="center" style="height:500px;width:1020px"></p>
+<p><img src= "successpage.jpg" align="center" style="height:500px; width:1020px;"></p>
+<footer>
+<p class="space">&copy;&nbsp;1999-2015&nbsp;PayPal&nbsp;Inc&nbsp;&nbsp;&nbsp;
+Privacy&nbsp;&nbsp;&nbsp;Legal&nbsp;&nbsp;&nbsp;Contact</p>
 
-<p>© 1999-2015 PayPal Inc   
-Privacy   Legal   Contact</p>
+</footer>
 
 
-</div>
+
+
 </body>
 <?php
 include ("account.php");
